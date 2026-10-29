@@ -1,0 +1,241 @@
+{
+  "trusted_prices": {
+    "driver": {
+      "cores": 3,
+      "envVars": [
+        "CLOUD_ENVIRONMENT",
+        "ENVIRONMENT_SPEC",
+        "SNESS_PATH_API_TOKEN",
+        "SNESS_PATH_API_URL"
+      ],
+      "memory": "10000m",
+      "memoryOverhead": "2000m",
+      "nodeSelector": {
+        "nodeName": "driver-large"
+      },
+      "serviceAccount": "dag-canaisdigitais"
+    },
+    "executor": {
+      "cores": 8,
+      "envVars": [
+        "CLOUD_ENVIRONMENT",
+        "ENVIRONMENT_SPEC",
+        "SNESS_PATH_API_TOKEN",
+        "SNESS_PATH_API_URL"
+      ],
+      "memory": "88000m",
+      "memoryOverhead": "6000m",
+      "nodeSelector": {
+        "nodeName": "sp-e-m1"
+      },
+      "serviceAccount": "dag-canaisdigitais"
+    },
+    "image": "us-east1-docker.pkg.dev/maga-bigdata/dataops/cloud-magalu/spark-jupyter-pyspark-joystick-line-3.5.5:1.0.21",
+    "sparkVersion": "3.5.5",
+    "mode": "cluster",
+    "dynamicAllocation": {
+      "enabled": true,
+      "initialExecutors": 12,
+      "maxExecutors": 20,
+      "minExecutors": 0
+    },
+    "sparkConf": {
+      "parquet.compression.codec.zstd.bufferPool.enabled": "true",
+      "parquet.compression.codec.zstd.level": "1",
+      "spark.decommission.enabled": "true",
+      "spark.default.parallelism": "200",
+      "spark.driver.cores": "4",
+      "spark.driver.extraJavaOptions": "-Dlog4j.configuration=file:///tmp/spark/conf/log4j.properties",
+      "spark.dynamicAllocation.cachedExecutorIdleTimeout": "120s",
+      "spark.dynamicAllocation.executorIdleTimeout": "60s",
+      "spark.dynamicAllocation.shuffleTracking.enabled": "false",
+      "spark.eventLog.compress": "true",
+      "spark.eventLog.dir": "gs://history-server-events/critical",
+      "spark.eventLog.enabled": "true",
+      "spark.eventLog.logStageExecutorMetrics": "true",
+      "spark.eventLog.rolling.enabled": "true",
+      "spark.eventLog.rolling.maxFileSize": "128m",
+      "spark.executor.cores": "10",
+      "spark.executor.decommission.forceKillTimeout": "25s",
+      "spark.executor.extraJavaOptions": "-Dlog4j.configuration=file:///tmp/spark/conf/log4j.properties",
+      "spark.hadoop.fs.gs.metadata.cache.enable": "true",
+      "spark.hadoop.fs.gs.metadata.cache.max.age.ms": "300000",
+      "spark.hadoop.fs.gs.status.parallel.enable": "false",
+      "spark.hadoop.mapreduce.outputcommitter.factory.scheme.s3a": "org.apache.hadoop.fs.s3a.commit.S3ACommitterFactory",
+      "spark.kubernetes.driver.limit.cores": "3",
+      "spark.kubernetes.driver.request.cores": "2",
+      "spark.kubernetes.executor.limit.cores": "8",
+      "spark.kubernetes.executor.podNamePrefix": "c-visaounicapreco-trustedprices",
+      "spark.kubernetes.executor.request.cores": "4",
+      "spark.metrics.conf": "/etc/metrics/conf/metrics.properties",
+      "spark.metrics.namespace": "${spark.app.name}",
+      "spark.rss.client.heartbeat.interval": "20000",
+      "spark.rss.client.heartbeat.timeout": "60000",
+      "spark.rss.client.netty.client.connection.timeout.ms": "1800000",
+      "spark.rss.client.retry.max": "10",
+      "spark.rss.client.send.size.limit": "4m",
+      "spark.rss.coordinator.quorum": "rss-coordinator-rss-0.uniffle.svc.cluster.local:19997,rss-coordinator-rss-1.uniffle.svc.cluster.local:19997",
+      "spark.rss.stageRetry.fetchFailureEnabled": "true",
+      "spark.rss.stageRetry.writeFailureEnabled": "false",
+      "spark.rss.storage.type": "MEMORY_LOCALFILE",
+      "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+      "spark.shuffle.io.maxRetries": "10",
+      "spark.shuffle.io.retryWait": "15s",
+      "spark.shuffle.manager": "org.apache.spark.shuffle.RssShuffleManager",
+      "spark.shuffle.sort.io.plugin.class": "org.apache.spark.shuffle.RssShuffleDataIo",
+      "spark.sql.adaptive.advisoryPartitionSizeInBytes": "64m",
+      "spark.sql.adaptive.coalescePartitions.enabled": "true",
+      "spark.sql.adaptive.enabled": "true",
+      "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+      "spark.sql.execution.arrow.pyspark.enabled": "true",
+      "spark.sql.extensions": "io.delta.sql.DeltaSparkSessionExtension",
+      "spark.sql.legacy.parquet.datetimeRebaseModeInWrite": "LEGACY",
+      "spark.sql.legacy.parquet.int96RebaseModeInRead": "LEGACY",
+      "spark.sql.legacy.parquet.int96RebaseModeInWrite": "LEGACY",
+      "spark.sql.parquet.compression.codec": "zstd",
+      "spark.sql.parquet.compression.codec.zstd.bufferPool.enabled": "true",
+      "spark.sql.parquet.compression.zstd.level": "1",
+      "spark.sql.readSideCharPadding": "false",
+      "spark.sql.shuffle.partitions": "200",
+      "spark.sql.streaming.metricsEnabled": "true",
+      "spark.task.maxFailures": "10",
+      "spark.ui.prometheus.enabled": "true"
+    },
+    "hadoopConf": {
+      "hive.metastore.uris": "thrift://10.209.0.58:9083",
+      "hive.metastore.warehouse.dir": "gs://prd-hive-metadata/spark/warehouse"
+    },
+    "arguments": [
+      "--environment",
+      "prd",
+      "--writing_mode",
+      "append"
+    ],
+    "deps": {
+      "pyFiles": [
+        "gs://us-east1-critical-prd-34bbf635-bucket/dags/visao_unica_commons/etls/utils/utils.py"
+      ]
+    },
+    "mainApplicationFile": "gs://us-east1-critical-prd-34bbf635-bucket/dags/visao_unica_preco/etls/trusted/visao_precos.py",
+    "_fonte": "gs://prd-minecraft/sparkApplications/c-visaounicapreco-trustedprices20261026173007_pod.log"
+  },
+  "publisher": {
+    "driver": {
+      "cores": 1,
+      "envVars": [
+        "CLOUD_ENVIRONMENT",
+        "ENVIRONMENT_SPEC",
+        "SNESS_PATH_API_TOKEN",
+        "SNESS_PATH_API_URL"
+      ],
+      "memory": "4000m",
+      "memoryOverhead": "1000m",
+      "nodeSelector": {
+        "nodeName": "driver-small"
+      },
+      "serviceAccount": "dag-canaisdigitais"
+    },
+    "executor": {
+      "cores": 8,
+      "envVars": [
+        "CLOUD_ENVIRONMENT",
+        "ENVIRONMENT_SPEC",
+        "SNESS_PATH_API_TOKEN",
+        "SNESS_PATH_API_URL"
+      ],
+      "memory": "4096m",
+      "memoryOverhead": "6000m",
+      "nodeSelector": {
+        "nodeName": "od-e-n4"
+      },
+      "serviceAccount": "dag-canaisdigitais"
+    },
+    "image": "us-east1-docker.pkg.dev/maga-bigdata/dataops/cloud-magalu/spark-jupyter-pyspark-joystick-line-3.5.5:1.0.21",
+    "sparkVersion": "3.5.5",
+    "mode": "cluster",
+    "dynamicAllocation": {
+      "enabled": true,
+      "initialExecutors": 1,
+      "maxExecutors": 4,
+      "minExecutors": 0
+    },
+    "sparkConf": {
+      "parquet.compression.codec.zstd.bufferPool.enabled": "true",
+      "parquet.compression.codec.zstd.level": "1",
+      "spark.decommission.enabled": "true",
+      "spark.default.parallelism": "200",
+      "spark.driver.cores": "2",
+      "spark.driver.extraJavaOptions": "-Dlog4j.configuration=file:///tmp/spark/conf/log4j.properties",
+      "spark.dynamicAllocation.cachedExecutorIdleTimeout": "120s",
+      "spark.dynamicAllocation.executorIdleTimeout": "60s",
+      "spark.dynamicAllocation.shuffleTracking.enabled": "false",
+      "spark.eventLog.compress": "true",
+      "spark.eventLog.dir": "gs://history-server-events/critical",
+      "spark.eventLog.enabled": "true",
+      "spark.eventLog.logStageExecutorMetrics": "true",
+      "spark.eventLog.rolling.enabled": "true",
+      "spark.eventLog.rolling.maxFileSize": "128m",
+      "spark.executor.cores": "10",
+      "spark.executor.decommission.forceKillTimeout": "25s",
+      "spark.executor.extraJavaOptions": "-Dlog4j.configuration=file:///tmp/spark/conf/log4j.properties",
+      "spark.hadoop.fs.gs.metadata.cache.enable": "true",
+      "spark.hadoop.fs.gs.metadata.cache.max.age.ms": "300000",
+      "spark.hadoop.fs.gs.status.parallel.enable": "false",
+      "spark.hadoop.mapreduce.outputcommitter.factory.scheme.s3a": "org.apache.hadoop.fs.s3a.commit.S3ACommitterFactory",
+      "spark.kubernetes.driver.limit.cores": "1",
+      "spark.kubernetes.driver.request.cores": "1",
+      "spark.kubernetes.executor.limit.cores": "8",
+      "spark.kubernetes.executor.podNamePrefix": "c-visaounicapreco-publisher",
+      "spark.kubernetes.executor.request.cores": "4",
+      "spark.metrics.conf": "/etc/metrics/conf/metrics.properties",
+      "spark.metrics.namespace": "${spark.app.name}",
+      "spark.rss.client.heartbeat.interval": "20000",
+      "spark.rss.client.heartbeat.timeout": "60000",
+      "spark.rss.client.netty.client.connection.timeout.ms": "1800000",
+      "spark.rss.client.retry.max": "10",
+      "spark.rss.client.send.size.limit": "4m",
+      "spark.rss.coordinator.quorum": "rss-coordinator-rss-0.uniffle.svc.cluster.local:19997,rss-coordinator-rss-1.uniffle.svc.cluster.local:19997",
+      "spark.rss.stageRetry.fetchFailureEnabled": "true",
+      "spark.rss.stageRetry.writeFailureEnabled": "false",
+      "spark.rss.storage.type": "MEMORY_LOCALFILE",
+      "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+      "spark.shuffle.io.maxRetries": "10",
+      "spark.shuffle.io.retryWait": "15s",
+      "spark.shuffle.manager": "org.apache.spark.shuffle.RssShuffleManager",
+      "spark.shuffle.sort.io.plugin.class": "org.apache.spark.shuffle.RssShuffleDataIo",
+      "spark.sql.adaptive.advisoryPartitionSizeInBytes": "64m",
+      "spark.sql.adaptive.coalescePartitions.enabled": "true",
+      "spark.sql.adaptive.enabled": "true",
+      "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+      "spark.sql.execution.arrow.pyspark.enabled": "true",
+      "spark.sql.extensions": "io.delta.sql.DeltaSparkSessionExtension",
+      "spark.sql.legacy.parquet.datetimeRebaseModeInWrite": "LEGACY",
+      "spark.sql.legacy.parquet.int96RebaseModeInRead": "LEGACY",
+      "spark.sql.legacy.parquet.int96RebaseModeInWrite": "LEGACY",
+      "spark.sql.parquet.compression.codec": "zstd",
+      "spark.sql.parquet.compression.codec.zstd.bufferPool.enabled": "true",
+      "spark.sql.parquet.compression.zstd.level": "1",
+      "spark.sql.readSideCharPadding": "false",
+      "spark.sql.shuffle.partitions": "200",
+      "spark.sql.streaming.metricsEnabled": "true",
+      "spark.task.maxFailures": "10",
+      "spark.ui.prometheus.enabled": "true"
+    },
+    "hadoopConf": {
+      "hive.metastore.uris": "thrift://10.209.0.58:9083",
+      "hive.metastore.warehouse.dir": "gs://prd-hive-metadata/spark/warehouse"
+    },
+    "arguments": [
+      "--environment",
+      "prd"
+    ],
+    "deps": {
+      "pyFiles": [
+        "gs://us-east1-critical-prd-34bbf635-bucket/dags/visao_unica_commons/etls/utils/utils.py"
+      ]
+    },
+    "mainApplicationFile": "gs://us-east1-critical-prd-34bbf635-bucket/dags/visao_unica_preco/etls/refined/publisher_changed_prices.py",
+    "_fonte": "gs://prd-minecraft/sparkApplications/c-visaounicapreco-publisher20261026181402_pod.log"
+  },
+  "_nota": "Extraido dos manifestos SparkApplication de 2026-10-26. envVars lista so os nomes; valores omitidos."
+}

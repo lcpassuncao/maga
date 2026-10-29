@@ -1,0 +1,9 @@
+--extra-index-url=https://${PYPI_USER}:${PYPI_PASS}@pypi.magazineluiza.com.br/pypi/
+numpy==1.21.5
+pandas==1.1.5
+pyspark==3.2.4
+sness-lib==2.0.11
+pytest
+black
+mypy
+

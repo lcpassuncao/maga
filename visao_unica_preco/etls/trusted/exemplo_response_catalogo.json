@@ -1,0 +1,269 @@
+{
+  "data": {
+    "attributes": [
+      {
+        "label": "Cor",
+        "type": "color",
+        "values": [
+          "preto, cinza, branco"
+        ]
+      }
+    ],
+    "canonical_ids": [
+      "ha04fbh2a8"
+    ],
+    "id": "ha04fbh2a8",
+    "is_deleted": false,
+    "is_new_product": false,
+    "price": "34.90",
+    "review_count": 68,
+    "review_score": 4.8,
+    "selections": {
+      "0": []
+    },
+    "sold_count": 0,
+    "type": "product",
+    "variations": [
+      {
+        "attributes": [
+          {
+            "label": "Cor",
+            "type": "color",
+            "value": "preto, cinza, branco"
+          }
+        ],
+        "brand": "ONYONSTORE",
+        "canonical_ids": [
+          "ha04fbh2a8"
+        ],
+        "categories": [
+          {
+            "composite_name": "IN|Inform\u00e1tica",
+            "id": "IN",
+            "name": "Inform\u00e1tica",
+            "subcategories": [
+              {
+                "composite_name": "RATO|Mouse",
+                "id": "RATO",
+                "name": "Mouse",
+                "url": "mouse/informatica/s/in/rato/"
+              },
+              {
+                "composite_name": "APRF|Acess\u00f3rios e Perif\u00e9ricos",
+                "id": "APRF",
+                "name": "Acess\u00f3rios e Perif\u00e9ricos",
+                "url": "acessorios-e-perifericos/informatica/s/in/aprf/"
+              }
+            ],
+            "url": "informatica/l/in/"
+          }
+        ],
+        "composite_id": "ha04fbh2a8-ha04fbh2a8",
+        "description": "",
+        "dimensions": {
+          "depth": 0.03,
+          "height": 0.05,
+          "weight": 0.3,
+          "width": 0.07
+        },
+        "ean": "0004227411335",
+        "factsheet": {},
+        "id": "ha04fbh2a8",
+        "is_chat_enabled": false,
+        "is_delivery_available": true,
+        "is_questions_and_answers_enabled": false,
+        "main_media": {
+          "seller_id": "onyonstore",
+          "seller_sku": "variados"
+        },
+        "media": {
+          "audios": [],
+          "images": [
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/143c2cf4f55f6142c69a4fa5675cd9c2.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/b2bafb53d4d1a9201b8d27f2b3169312.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/681b0db44a8017e5920b3b3668bc3cc1.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/be4277a1b1d6699e72981505cda8595d.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/df51e7d4864ca69e12e92306a3fbe7b4.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/c148d0d340cb952519e276eeda32d88e.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/dfa7079a160f806725f830da5bfbc9ae.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/9b6db4ef155a2dcc6e41fd3f5f6be919.jpeg",
+            "https://a-static.mlcdn.com.br/{w}x{h}/mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/onyonstore/variados/614ddb8fd272d0c1d14313e3115f3e57.jpeg"
+          ],
+          "podcasts": [],
+          "videos": []
+        },
+        "path": "mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/p/ha04fbh2a8/in/rato/",
+        "product_average_rating": 4.79,
+        "product_total_review_count": 68,
+        "reference": "ONYONSTORE",
+        "selections": {
+          "0": []
+        },
+        "sellers": [
+          {
+            "best_installment_plan": {
+              "installment_amount": "28.50",
+              "installment_quantity": 1,
+              "interest": "0.00",
+              "payment_method_description": "sem juros",
+              "payment_method_id": "visa",
+              "total_amount": "28.50"
+            },
+            "best_price": {
+              "discount": "10.00",
+              "payment_method_description": "no Pix",
+              "payment_method_id": "pix",
+              "total_amount": "27.00"
+            },
+            "currency": "BRL",
+            "delivery_availability": "nationwide",
+            "delivery_description": "Magalu",
+            "delivery_id": "magazineluiza",
+            "delivery_plus_1": false,
+            "delivery_plus_2": false,
+            "description": "Onyon Store",
+            "details": {
+              "address": {
+                "address": "Manoel Esteves",
+                "city": "Santo Andre",
+                "complement": "",
+                "country": "Brasil",
+                "district": "Vila Sacadura Cabral",
+                "number": "180",
+                "state": "SP",
+                "zipcode": "09060740"
+              },
+              "contacts": [
+                {
+                  "email": "contatoonyonstore@gmail.com",
+                  "name": "CHRISTIAN FELIPE VIEIRA",
+                  "phone": "19997508812",
+                  "type": "Financial"
+                },
+                {
+                  "email": "contatoonyonstore@gmail.com",
+                  "name": "CHRISTIAN FELIPE  VIEIRA",
+                  "phone": "19997508812",
+                  "type": "Commercial"
+                },
+                {
+                  "email": "contatoonyonstore@gmail.com",
+                  "name": "CHRISTIAN FELIPE  VIEIRA",
+                  "phone": "19997508812",
+                  "type": "CSC"
+                },
+                {
+                  "email": "contatoonyonstore@gmail.com",
+                  "name": "CHRISTIAN FELIPE  VIEIRA",
+                  "phone": "19997508812",
+                  "type": "Legal"
+                },
+                {
+                  "email": "contatoonyonstore@gmail.com",
+                  "name": "CHRISTIAN FELIPE  VIEIRA",
+                  "phone": "19997508812",
+                  "type": "IT"
+                }
+              ],
+              "delivery_rate": 5,
+              "document_number": "49085373000100",
+              "id": "onyonstore",
+              "integration_info": {
+                "erp": "Api",
+                "platform": "Bling"
+              },
+              "is_active": true,
+              "legal_name": "Onyon Store",
+              "name": "Onyon Store",
+              "score": 4.7,
+              "seller_since": "2024-01-09T00:00:00+00:00",
+              "sells_to_company": false,
+              "services": [
+                {
+                  "is_active": true,
+                  "service": "magalu-pagamentos-v2"
+                },
+                {
+                  "is_active": true,
+                  "service": "magalu-eddie-inventory"
+                },
+                {
+                  "is_active": true,
+                  "service": "magalu-entregas"
+                }
+              ],
+              "total_sales": 9743
+            },
+            "exchange_rate": null,
+            "id": "onyonstore",
+            "id_exchange_rate": null,
+            "is_active": true,
+            "is_ipdv": false,
+            "list_price": "34.90",
+            "minimum_order_quantity": 1,
+            "offer_tags": [
+              "magalu_indica"
+            ],
+            "order": 0,
+            "original_price_foreign": null,
+            "price": "30.00",
+            "price_campaign_id": "6698287e75feb29b8914b5a2",
+            "price_description": "no cart\u00e3o",
+            "selections": {
+              "0": []
+            },
+            "sells_to_company": false,
+            "sku": "variados",
+            "sold_count": 0,
+            "status": "published",
+            "stock_count": 1,
+            "stock_type": "on_seller",
+            "store_pickup_available": false,
+            "subsidy": {
+              "amount": 1.4,
+              "type": "absolute",
+              "value": 4
+            },
+            "tags": [
+              {
+                "action": {
+                  "type": "webview",
+                  "url": "https://especiais.magazineluiza.com.br/app-webviews/tagdescontomagalupay"
+                },
+                "background_color": "#0086FF",
+                "icon": null,
+                "icon_properties": null,
+                "layout": "long",
+                "message": "ou R$ 27,00 \u00e0 vista com MagaluPay",
+                "text_color": "#0086FF",
+                "type": "discount-account_balance",
+                "version": "v1"
+              },
+              {
+                "action": {
+                  "type": "webview",
+                  "url": "https://especiais.magazineluiza.com.br/app-webviews/tagdescontomagalupay"
+                },
+                "background_color": null,
+                "icon": "https://superapp.mlcdn.com.br/images/{w}x{h}/icons/magalupay.png",
+                "icon_properties": {
+                  "height": 24,
+                  "position": "end",
+                  "width": 80
+                },
+                "layout": "long",
+                "message": "Pague R$ 27,00 \u00e0 vista no",
+                "text_color": "#9B9B9B",
+                "type": "discount-account_balance",
+                "version": "v2"
+              }
+            ]
+          }
+        ],
+        "title": "Mouse Sem Fio Recarreg\u00e1vel Wireles Optico Led Rgb Ergon\u00f4mico",
+        "type": "product",
+        "url": "mouse-sem-fio-recarregavel-wireles-optico-led-rgb-ergonomico-onyonstore/p/ha04fbh2a8/in/rato/"
+      }
+    ]
+  }
+}
